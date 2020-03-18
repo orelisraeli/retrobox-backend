@@ -1,0 +1,30 @@
+{
+  "name": "retrobox-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orelisraeli/retrobox-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orelisraeli/retrobox-backend/issues"
+  },
+  "homepage": "https://github.com/orelisraeli/retrobox-backend#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.5"
+  }
+}
