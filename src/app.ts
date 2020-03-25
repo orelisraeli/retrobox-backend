@@ -4,6 +4,8 @@ import {RetroController} from './controllers/retro.controller';
 
 import dotenv = require('dotenv');
 import mongoose = require("mongoose");
+import cors = require("cors");
+
 
 const app = express();
 const port = 4000;
@@ -11,6 +13,8 @@ const port = 4000;
 dotenv.config();
 
 app.use(bodyParser.json());
+
+app.use(cors());
 
 app.use('/', new RetroController().router);
 
