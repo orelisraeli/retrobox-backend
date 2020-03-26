@@ -1,4 +1,5 @@
 import express from 'express';
+import { v4 as uuidv4 } from 'uuid';
 import {Retro} from '../models/retro.model';
 import RetroModel from "../schemas/retro-db.model";
 
@@ -19,11 +20,12 @@ export class RetroController {
     }
 
     public save(request: express.Request, response: express.Response) {
-        const retro: Retro = request.body;
+        const retro: Retro = request.body.data;
 
         retro.createDate = new Date().toLocaleString('en-GB');
 
         const retroModel = new RetroModel({
+            key: uuidv4(),
             team: retro.team,
             sprintIteration: retro.sprintIteration,
             createDate: retro.createDate,
